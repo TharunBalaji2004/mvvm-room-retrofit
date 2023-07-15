@@ -9,3 +9,8 @@ interface QuoteService {
     @GET("/quotes")
     suspend fun getQuotes(@Query("page") page: Int): Response<QuoteList>
 }
+
+/*
+QuoteService Interface tells the API endpoints to hit
+(also includes parameter, responses type)
+ */

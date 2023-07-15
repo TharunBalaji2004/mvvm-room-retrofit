@@ -13,3 +13,7 @@ object RetrofitHelper {
             .build()
     }
 }
+
+/*
+Since, the Retrofit instances is costlier, Helpers are used to directly create objects
+*/
