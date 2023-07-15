@@ -8,12 +8,13 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.tharunbalaji.mvvm_room_retrofit.models.QuoteList
 import com.tharunbalaji.mvvm_room_retrofit.repository.QuoteRepository
+import com.tharunbalaji.mvvm_room_retrofit.repository.Response
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
 class MainViewModel(private val quoteRepository: QuoteRepository): ViewModel() {
 
-    val quotes: LiveData<QuoteList> = quoteRepository.quotes
+    val quotes: LiveData<Response<QuoteList>> = quoteRepository.quotes
     val pageNumber = ObservableField<Int>()
     val pageLoading = ObservableField<Boolean>()
 
